@@ -4,9 +4,9 @@ import { Phone, Mail, MapPin, Instagram, Facebook, Clock, Youtube, MessageCircle
 
 const Contact = () => {
     const whatsappUrl = `https://wa.me/527761541551`;
-    const instagramUrl = `https://instagram.com/centroholisticom`; // Placeholder, update if needed
-    const facebookUrl = `https://facebook.com/centroholisticom`;    // Placeholder, update if needed
-    const youtubeUrl = `https://youtube.com/@centroholisticom`;     // Placeholder, update if needed
+    const instagramUrl = `https://www.instagram.com/centroholisticom`;
+    const facebookUrl = `https://www.facebook.com/centroholisticom`;
+    const youtubeUrl = `https://www.youtube.com/@centroholisticom`;
 
     return (
         <section id="contacto" className="page-section">

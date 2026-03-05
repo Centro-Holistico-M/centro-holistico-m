@@ -40,7 +40,11 @@ const Navbar = () => {
         e.preventDefault();
         const target = document.querySelector(href);
         if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
+            const navHeight = 80;
+            window.scrollTo({
+                top: target.offsetTop - navHeight,
+                behavior: 'smooth'
+            });
         }
     };
 

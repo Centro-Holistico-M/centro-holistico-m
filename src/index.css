@@ -15,9 +15,7 @@
 
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --nav-height: 70px;
-  /* Actual height of the compact header */
-  --section-padding-top: 5rem;
-  /* Uniform vertical offset for all titles */
+  --section-padding-top: 80px;
   --section-padding-bottom: 5rem;
 }
 
@@ -57,6 +55,14 @@ h3,
   letter-spacing: -0.01em;
 }
 
+/* Uniform heading alignment */
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
 ul {
   list-style: none;
 }
@@ -66,12 +72,23 @@ a {
   color: inherit;
 }
 
+/* ── Button Animations ── */
+button,
+.social-button,
+.nav-link-item {
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:active,
+.social-button:active {
+  transform: scale(0.95) !important;
+}
+
 /* Layout Utilities */
 .container {
   max-width: 600px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  /* Safe lateral padding for mobile */
 }
 
 .section,
@@ -85,8 +102,7 @@ a {
   font-family: var(--font-serif);
   font-size: clamp(2.2rem, 8vw, 2.8rem);
   margin-top: 0;
-  /* Reset top margin to align with padding */
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
   line-height: 1.2;
   color: var(--text-primary);
@@ -95,7 +111,7 @@ a {
 
 @media (min-width: 768px) {
   :root {
-    --section-padding-top: 7rem;
+    --section-padding-top: 100px;
     --section-padding-bottom: 7rem;
   }
 
@@ -110,12 +126,10 @@ a {
   background: white;
   border-radius: 12px;
   padding: 1.5rem 1.25rem;
-  /* Comfortable internal mobile padding */
   border: 1px solid var(--border-color);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
   transition: var(--transition-smooth);
   width: 100%;
-  /* Prevent card overflow */
 }
 
 .card:hover {
@@ -123,6 +137,7 @@ a {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
 }
 
+/* ── Social Buttons ── */
 .social-button {
   display: flex;
   justify-content: center;
@@ -137,14 +152,19 @@ a {
   font-size: 1rem;
   border: none;
   cursor: pointer;
-  transition: var(--transition-smooth);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   text-decoration: none;
 }
 
 .social-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   opacity: 0.95;
+}
+
+.social-button:active {
+  transform: scale(0.95) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .whatsapp-btn {
@@ -168,7 +188,6 @@ a {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: 1fr;
-  /* Strict 1 column for mobile */
   align-items: stretch;
 }
 
@@ -201,7 +220,7 @@ a {
   }
 }
 
-/* Compact Navigation Styling - Premium Refactor */
+/* ── Compact Navigation ── */
 .compact-nav {
   position: fixed;
   top: 0;
@@ -238,7 +257,6 @@ a {
 
 .brand-logo-img {
   height: 48px;
-  /* Increased base logo size for mobile for clear branding */
   width: auto;
   border-radius: 4px;
   object-fit: contain;
@@ -249,24 +267,24 @@ a {
   align-items: center;
   gap: 0.2rem;
   flex-wrap: wrap;
-  /* Allows wrapping on extremely small phones if necessary */
 }
 
 .nav-link-item {
   font-size: 0.75rem;
-  /* Base minimum readable */
   color: var(--text-secondary);
   font-weight: 500;
   padding: 0.7rem 0.5rem;
-  /* Deep padding to ensure minimum vertical 48px touch target logic globally */
   position: relative;
-  transition: var(--transition-smooth);
+  transition: color 0.3s ease, transform 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   min-height: 48px;
-  /* Ensure mobile touch target */
   display: flex;
   align-items: center;
+}
+
+.nav-link-item:active {
+  transform: scale(0.95);
 }
 
 .nav-link-item.active {
