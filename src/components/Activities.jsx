@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { fetchSheet } from '../services/sheetService';
 
 const Activities = () => {
-    const [activities, setActivities] = useState([]);
+    const [activities, setActivities] = useState({ keys: [], data: {} });
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -37,8 +37,6 @@ const Activities = () => {
 
     return (
         <div style={{ paddingBottom: '2rem' }}>
-
-
             <div className="grid-layout">
                 {activities.keys.map((dia, idx) => (
                     <motion.div

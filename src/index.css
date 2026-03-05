@@ -78,9 +78,7 @@ a {
 .page-section {
   padding-top: var(--section-padding-top);
   padding-bottom: var(--section-padding-bottom);
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
+  min-height: 80vh;
 }
 
 .page-title {
