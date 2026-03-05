@@ -1,6 +1,6 @@
 # Centro Holístico M
 
-Aplicación web para Centro Holístico M, construida con React y Vite. Lista para despliegue en Vercel.
+Aplicación web para Centro Holístico M, construida con React y Vite. Lista para despliegue en Vercel. (Actualizado: 04-Mar-2026)
 
 ## Instalación y Desarrollo Local
 
