@@ -36,8 +36,8 @@ const Activities = () => {
     if (!activities.keys || activities.keys.length === 0) return null;
 
     return (
-        <div className="container" style={{ marginBottom: '4rem' }}>
-            <h1 className="page-title">Actividades Semanales</h1>
+        <div style={{ paddingBottom: '2rem' }}>
+
 
             <div className="grid-layout">
                 {activities.keys.map((dia, idx) => (

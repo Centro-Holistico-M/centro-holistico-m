@@ -21,9 +21,9 @@ const Events = () => {
     if (loading) return null;
 
     return (
-        <div className="section" style={{ background: 'var(--bg-secondary)', padding: '5rem 0' }}>
-            <div className="container">
-                <h2 style={{ fontSize: '1.75rem', marginBottom: '3rem', textAlign: 'center' }}>Eventos Especiales</h2>
+        <div style={{ marginTop: '4rem' }}>
+            <div>
+                <h3 className="font-serif" style={{ fontSize: '1.75rem', marginBottom: '2.5rem', textAlign: 'center', color: 'var(--text-primary)' }}>Eventos Especiales</h3>
 
                 {events.length === 0 ? (
                     <p style={{ textAlign: 'center', fontStyle: 'italic', color: 'var(--text-muted)' }}>

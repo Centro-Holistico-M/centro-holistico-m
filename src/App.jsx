@@ -12,8 +12,11 @@ function App() {
 
       <main>
         <section id="inicio" className="page-section">
-          <Activities />
-          <Events />
+          <div className="container">
+            <h2 className="page-title">Inicio</h2>
+            <Activities />
+            <Events />
+          </div>
         </section>
 
         <Services />

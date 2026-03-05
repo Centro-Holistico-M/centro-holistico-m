@@ -14,8 +14,11 @@
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --nav-height: 85px;
-  /* Adjusted for compact header */
+  --nav-height: 70px;
+  /* Actual height of the compact header */
+  --section-padding-top: 5rem;
+  /* Uniform vertical offset for all titles */
+  --section-padding-bottom: 5rem;
 }
 
 * {
@@ -28,6 +31,10 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--nav-height);
+}
+
+section {
+  scroll-margin-top: var(--nav-height);
 }
 
 body {
@@ -67,27 +74,21 @@ a {
   /* Safe lateral padding for mobile */
 }
 
-.section {
-  padding: 3rem 0;
-  /* Optimized mobile vertical padding */
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Unified Page Section Standardization */
+.section,
 .page-section {
-  padding: 4rem 0;
-  /* Strict Universal Padding for all main views */
-  min-height: 80vh;
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
 }
 
 .page-title {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 8vw, 2.5rem);
-  margin-bottom: 2.5rem;
+  font-size: clamp(2.2rem, 8vw, 2.8rem);
+  margin-top: 0;
+  /* Reset top margin to align with padding */
+  margin-bottom: 3rem;
   text-align: center;
   line-height: 1.2;
   color: var(--text-primary);
@@ -95,14 +96,14 @@ a {
 }
 
 @media (min-width: 768px) {
-  .container {
-    max-width: 800px;
-    padding: 0 2rem;
+  :root {
+    --section-padding-top: 7rem;
+    --section-padding-bottom: 7rem;
   }
 
-  .section,
-  .page-section {
-    padding: 5rem 0;
+  .container {
+    max-width: 900px;
+    padding: 0 2rem;
   }
 }
 
