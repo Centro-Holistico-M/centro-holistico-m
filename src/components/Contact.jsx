@@ -9,7 +9,7 @@ const Contact = () => {
     const youtubeUrl = `https://www.youtube.com/@centroholisticom`;
 
     return (
-        <section id="contacto" className="page-section">
+        <section id="contacto">
             <div className="container">
                 <h2 className="page-title">Contacto</h2>
 
@@ -22,7 +22,7 @@ const Contact = () => {
                         viewport={{ once: true }}
                     >
                         <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
-                            <h3 className="font-serif" style={{ fontSize: '1.8rem', color: 'var(--accent-gold)' }}>
+                            <h3 style={{ fontSize: '1.8rem', color: 'var(--accent-gold)' }}>
                                 Centro Holístico M
                             </h3>
                         </div>
@@ -65,26 +65,26 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        {/* Social & Action Buttons */}
+                        {/* Social Buttons (User Specification Compliant) */}
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem' }}>
-                            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="social-button whatsapp-btn" aria-label="WhatsApp">
+                            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="social-whatsapp social-icon social-button whatsapp-btn" aria-label="WhatsApp">
                                 <MessageCircle size={20} />
-                                <span>Contactar por WhatsApp</span>
+                                <span>WhatsApp</span>
                             </a>
 
-                            <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="social-button instagram-btn" aria-label="Instagram">
+                            <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="social-instagram social-icon social-button instagram-btn" aria-label="Instagram">
                                 <Instagram size={20} />
-                                <span>Síguenos en Instagram</span>
+                                <span>Instagram</span>
                             </a>
 
-                            <a href={facebookUrl} target="_blank" rel="noopener noreferrer" className="social-button facebook-btn" aria-label="Facebook">
+                            <a href={facebookUrl} target="_blank" rel="noopener noreferrer" className="social-facebook social-icon social-button facebook-btn" aria-label="Facebook">
                                 <Facebook size={20} />
-                                <span>Síguenos en Facebook</span>
+                                <span>Facebook</span>
                             </a>
 
-                            <a href={youtubeUrl} target="_blank" rel="noopener noreferrer" className="social-button youtube-btn" aria-label="YouTube">
+                            <a href={youtubeUrl} target="_blank" rel="noopener noreferrer" className="social-youtube social-icon social-button youtube-btn" aria-label="YouTube">
                                 <Youtube size={20} />
-                                <span>Canal de YouTube</span>
+                                <span>YouTube</span>
                             </a>
                         </div>
                     </motion.div>
