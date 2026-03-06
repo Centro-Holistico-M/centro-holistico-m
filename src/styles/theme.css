@@ -1,0 +1,111 @@
+:root {
+    --bg-deep: #0A0A0A;
+    --gold-soft: #D4AF37;
+    --white-warm: #FAFAFA;
+    --text-muted: #A0A0A0;
+    --accent-gold: #C5A028;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --border-gold: rgba(212, 175, 55, 0.2);
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-deep);
+    color: var(--white-warm);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+.font-premium {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-padding {
+    padding: 8rem 0;
+}
+
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 5rem 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gold-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    border: 1px solid var(--gold-soft);
+    color: var(--gold-soft);
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: var(--transition);
+}
+
+.gold-button:hover {
+    background: var(--gold-soft);
+    color: var(--bg-deep);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.premium-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--border-gold);
+    padding: 2.5rem;
+    transition: var(--transition);
+    height: 100%;
+}
+
+.premium-card:hover {
+    border-color: var(--gold-soft);
+    transform: translateY(-5px);
+    background: rgba(212, 175, 55, 0.05);
+}

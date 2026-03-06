@@ -1,27 +1,23 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Activities from './components/Activities';
-import Events from './components/Events';
-import Services from './components/Services';
-import Contact from './components/Contact';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Servicios from './components/Servicios';
+import Contacto from './components/Contacto';
+import Footer from './components/Footer';
+import './styles/theme.css';
 
 function App() {
   return (
     <div className="app">
-      <Navbar />
+      <Header />
 
       <main>
-        <section id="inicio" className="page-section">
-          <div className="container">
-            <h2 className="page-title">Inicio</h2>
-            <Activities />
-            <Events />
-          </div>
-        </section>
-
-        <Services />
-        <Contact />
+        <Hero />
+        <Servicios />
+        <Contacto />
       </main>
+
+      <Footer />
     </div>
   );
 }
