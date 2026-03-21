@@ -17,10 +17,11 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.13.1",
+    "vite-plugin-vercel": "^11.0.3",
     "zustand": "^5.0.12"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
-    "vite": "^5.4.11"
+    "vite": "^8.0.1"
   }
 }
