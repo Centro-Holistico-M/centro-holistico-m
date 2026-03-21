@@ -6,6 +6,7 @@ import Inicio from './components/Inicio';
 import Servicios from './components/Servicios';
 import Contacto from './components/Contacto';
 import Footer from './components/Footer';
+import ChatWidget from './components/ChatWidget';
 import AdminLayout from './admin/AdminLayout';
 import Dashboard from './admin/pages/Dashboard';
 import Citas from './admin/pages/Citas';
@@ -31,6 +32,8 @@ function App() {
 
       <Footer />
 
+      <ChatWidget />
+
       <Routes>
         <Route path="/admin/*" element={
           <AdminLayout onClose={() => window.location.href = '/'}>
@@ -52,16 +55,16 @@ function App() {
         style={{
           position: 'fixed',
           bottom: '20px',
-          right: '20px',
+          left: '20px',
           width: '56px',
           height: '56px',
           borderRadius: '50%',
-          background: 'linear-gradient(135deg, #d4af37 0%, #b8962e 100%)',
-          border: 'none',
-          color: '#000',
+          background: 'rgba(255,255,255,0.1)',
+          border: '1px solid rgba(212, 175, 55, 0.3)',
+          color: '#d4af37',
           fontSize: '24px',
           cursor: 'pointer',
-          boxShadow: '0 4px 15px rgba(212, 175, 55, 0.4)',
+          boxShadow: '0 4px 15px rgba(0,0,0,0.3)',
           zIndex: 999,
           display: 'flex',
           alignItems: 'center',
