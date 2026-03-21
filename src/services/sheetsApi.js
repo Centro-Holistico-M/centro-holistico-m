@@ -1,6 +1,6 @@
-export const CONTACTO_API = "https://opensheet.elk.sh/1Tdxx6a3nKK8JmQvL8BwVzJhbFaIWcHEAgd07cmt9uG0/Contacto";
-export const SERVICIOS_API = "https://opensheet.elk.sh/1Tdxx6a3nKK8JmQvL8BwVzJhbFaIWcHEAgd07cmt9uG0/Servicios";
-export const INICIO_API = "https://opensheet.elk.sh/1Tdxx6a3nKK8JmQvL8BwVzJhbFaIWcHEAgd07cmt9uG0/Inicio";
+export const CONTACTO_API = "https://opensheet.elk.sh/1Tdxx6a3nKK8JmQvL8BwVzJhbFalWcHEAgd07cmt9uG0/Contacto";
+export const SERVICIOS_API = "https://opensheet.elk.sh/1Tdxx6a3nKK8JmQvL8BwVzJhbFalWcHEAgd07cmt9uG0/Servicios";
+export const INICIO_API = "https://opensheet.elk.sh/1Tdxx6a3nKK8JmQvL8BwVzJhbFalWcHEAgd07cmt9uG0/Inicio";
 
 /**
  * Fetches data from a given API endpoint.
