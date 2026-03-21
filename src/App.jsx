@@ -6,7 +6,7 @@ import Inicio from './components/Inicio';
 import Servicios from './components/Servicios';
 import Contacto from './components/Contacto';
 import Footer from './components/Footer';
-// import ChatWidget from './components/ChatWidget';
+import ChatWidget from './components/ChatWidget';
 import AdminLayout from './admin/AdminLayout';
 import Dashboard from './admin/pages/Dashboard';
 import Citas from './admin/pages/Citas';
@@ -32,7 +32,7 @@ function App() {
 
       <Footer />
 
-      {/* <ChatWidget /> */}
+      <ChatWidget />
 
       <Routes>
         <Route path="/admin/*" element={
